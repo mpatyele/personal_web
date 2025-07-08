@@ -76,6 +76,7 @@ span {
   color: white;
   border: none;
   text-wrap: nowrap;
+  align-items: center;
 }
 .gradient-btn:hover {
   transform: scale(1.05);
@@ -147,6 +148,7 @@ section {
 .btn-group {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 .btn {
   display: inline-block;
@@ -159,6 +161,7 @@ section {
   border: 2px solid transparent;
   font-weight: 600;
   transition: 0.3s ease-in-out;
+  align-items: center;
 }
 .btn:hover {
   transform: scale(1.05);
@@ -185,6 +188,7 @@ section {
   min-height: 100vh;
   padding: 10rem 15%;
   margin-top: 7.5rem;
+  scroll-margin-top: 100px;
 }
 .about-img img {
   width: 32vw;
@@ -225,11 +229,12 @@ section {
   margin-top: -70px;
 }
 .projects-box {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   place-items: center;
   gap: 3rem;
   row-gap: 5rem;
+  width: 110%;  
 }
 .project-card {
   display: flex;
@@ -246,13 +251,16 @@ section {
   cursor: pointer;
   box-shadow: 0 0 5px var(--main-color);
   transition: 0.3s ease;
+  height: 100%;
+  flex: 1;
 }
 .project-card:hover {
   box-shadow: 0 0 25px var(--main-color), 0 0 25px var(--main-color);
   transform: scale(1.02);
 }
 .project-card img {
-  max-width: 300px;
+  width: 100%;
+  height: 200px;
   border-radius: 2em;
   object-fit: cover;
 }
@@ -261,4 +269,64 @@ section {
 }
 .project-card p {
   font-size: 1.6rem;
+}
+
+.contact {
+  background-color: var(--bg-color);
+}
+.contact h2 {
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+
+.contact form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0;
+  text-align: center;
+}
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  border: 2px solid var(--main-color);
+  margin: 1.5rem 0;
+  resize: none;
+}
+
+.footer {
+  background-color: var(--bg-color);
+  padding: 50px 0;
+}
+.footer .social-icons {
+  text-align: center;
+}
+.footer ul {
+  text-align: center;
+  font-size: 1.8rem;
+}
+.footer ul li{
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer ul li a{
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.2s ease-in-out;
+}
+
+.footer ul li a:hover{
+  border-bottom: 3px solid var(--main-color);
+}
+
+.footer .copyright{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
 }
